@@ -110,3 +110,45 @@
 		}
 	}
 }
+
+
+/*================PRODUCTION=============*/
+
+.page {
+
+	&__production {
+	}
+}
+.production {
+
+	&__container {
+		
+	}
+
+	&__title {
+	}
+
+	&__text {
+	}
+
+	&__slider {
+	}
+
+	&__swiper {
+	}
+
+	&__slide {
+	}
+
+	&__article {
+	}
+
+	&__navigation {
+		//display: flex;
+		button {
+			width: 20px;
+			height: 20px;
+			background-color: red;
+		}
+	}
+}

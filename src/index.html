@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Главная"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="page__navigation navigation">
+					<div class="navigation__container">
+						<div class="navigation__wrapper">
+							<a href="#" class="navigation__link ">
+								<div class="navigation__img -ibg">
+									<img src="@img/navigation/Produkcia.png" alt="Продукция">
+								</div>
+								<span>продукция</span>
+							</a>
+							<a href="#" class="navigation__link ">
+								<div class="navigation__img -ibg">
+									<img src="@img/navigation/istoria.png" alt="История">
+								</div>
+								<span>История</span>
+							</a>
+							<a href="#" class="navigation__link ">
+								<div class="navigation__img -ibg">
+									<img src="@img/navigation/V_cifrah.png" alt="В цифрах">
+								</div>
+								<span>В цифрах</span>
+							</a>
+							<a href="#" class="navigation__link ">
+								<div class="navigation__img -ibg">
+									<img src="@img/navigation/Partnerbl.png" alt="Партнёры">
+								</div>
+								<span>Партнёры</span>
+							</a>
+							<a href="#" class="navigation__link ">
+								<div class="navigation__img -ibg">
+									<img src="@img/navigation/Blagodarnosti.png" alt="Благодарности">
+								</div>
+								<span>Благодарности</span>
+							</a>
+						</div>
+					</div>
+				</section>
+				<section class="page__company company">
+					<div class="company__container">
+						<p class="company__title title">Компания сегодня</p>
+						<p class="company__text text"><span>FoxWeld</span> входит в группу лидеров российского рынка <span>сварочной продукции, строительного оборудования и инструментов</span>.</p>
+						<ul class="company__list">
+							<li class="company__item">Современные и эффективные решения, разрабатываемые собственными инженерами и конструкторами;</li>
+							<li class="company__item">Широкий спектр передового и надёжного оборудования от бытового до профессионального;</li>
+							<li class="company__item">Многоступенчатый контроль качества собственной продукции;</li>
+							<li class="company__item">Высокое качество, регулярно подтверждаемое сертификационными центрами и расширенной гарантией до 5 лет;</li>
+							<li class="company__item">Крупный собственный складской комплекс и отлаженная логистическая система;</li>
+							<li class="company__item">Региональные представительства и обширная дилерская сеть по России и СНГ;</li>
+							<li class="company__item">Широкая сеть авторизованных сервис-центров;</li>
+							<li class="company__item">Поддержка и обучение партнерских организаций.</li>
+						</ul>
+					</div>
+					<div class="company__video">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/oDHpupTjo-k" 
+						title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+						 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						  allowfullscreen></iframe>
+					</div>
+				</section>
+				<section class="page__production production">
+					<div class="production__container">
+						<p class="production__title title">Продукция</p>
+						<p class="production__text text">Под брендом FoxWeld выпускается высококачественная техника для <span>бытового, профессионального и промышленного</span> использования.</p>
+						<div class="production__slider">
+							<div class="production__swiper">
+								<div class="production__slide">
+									<img src="@img/production/04_топ 10_генераторы.jpg" alt="Генераторы">
+								</div>
+								<div class="production__slide">
+									<img src="@img/production/05_топ 5_компрессоры.jpg" alt="Компрессоры">
+								</div>
+								<div class="production__slide">
+									<img src="@img/production/07_топ 3_маски.jpg" alt="Маски">
+								</div>
+								<div class="production__slide">
+									<img src="@img/production/13_топ 10_строительное оборудование.jpg" alt="Строительное оборудование">
+								</div>
+								<div class="production__slide">
+									<img src="@img/production/01_топ 5_сварка.jpg" alt="Сварка">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

@@ -1,0 +1,112 @@
+//==========NAVIGATION==========================================================================================
+.page {
+
+	&__navigation {
+		margin-top: 20px;
+	}
+}
+.navigation {
+
+	&__container {
+		@media (max-width:$mobile){
+			 padding-left: 10px;
+			 padding-right: 10px; 
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		//gap:20px;
+	}
+
+	
+	&__link {
+		flex: 0 0 percent(180,1280);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 10px;
+		@media (max-width:$mobile){
+			 flex: 0 0 16.67%; 
+		}
+		&:hover{
+			& .navigation__img {
+				transform: translateY(-20px);
+			}
+		}
+		span {
+			text-align: center;
+			font-weight: 600;
+			text-transform: uppercase;
+			transition: color 0.5s;
+			@include adaptiveValue("font-size", 14, 10,1280,768,1);
+			&:hover{
+				color: $mainorange;
+			}
+			@media (max-width:$mobile){
+				 display: none; 
+			}
+		}
+	}
+
+	&__img {
+		transform: translateY(0);
+		transition: transform 0.5s;
+		padding-bottom: 100%;
+	}
+}
+
+//=====COMPANY===============================================================================================
+
+.page {
+
+	&__company {
+		@include adaptiveValue("margin-top", 60, 20,1280,320,1);
+	}
+}
+.company {
+
+	&__list {
+		@include adaptiveValue("margin-top", 50, 23,1280,320,1);
+		padding: 0px 15px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		font-size: 12px;
+		position: relative;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		&::before{
+			content:'';
+			flex: 0 0 5px;
+			display: block;
+			width: 5px;
+			height: 5px;
+			margin-right: 10px;
+			border-radius: 50%;
+			background-color: $mainColor;
+		}
+	}
+
+	&__video {
+		@include adaptiveValue("margin-top", 50, 23,1280,320,1);
+		position: relative;
+		width: percent(1000,1280);
+		margin: 0 auto;
+		padding-bottom: percent(590,1280);
+		height: 0;
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

@@ -117,22 +117,199 @@
 .page {
 
 	&__production {
+		@include adaptiveValue("margin-top", 50, 23,1280,320,1);
 	}
 }
 .production {
 
 	&__container {
-		
+		position: relative;
 	}
 
 	&__title {
-	}
+		text-transform: uppercase;
+		&::before,&::after {
+			@include adaptiveValue("width", 540,95,1280,320,1);
+		}
+		}
 
 	&__text {
+
 	}
 
 	&__slider {
+		
+		
+		//padding-left: 100px;
+		//padding-right: 100px;
+		max-width: percent(250,320);
+		//width: 100%;
+		@include adaptiveValue("margin-left", -8, -4,1);
+		@include adaptiveValue("margin-left", -8, -4,1);
+		@include adaptiveValue("padding", 8, 4,1280,320,1) ;
 	}
+
+	&__swiper {
+		
+	}
+
+	&__slide {
+		//width: percent(190,1233);
+		padding-bottom: percent(150,1233);
+		box-shadow: 0px 0px 0px 0px rgba(34, 60, 80, 0.2);
+			transition: box-shadow 0.5s;
+			&:hover{
+				box-shadow: -6px 6px 8px 0px rgba(34, 60, 80, 0.2);
+			}
+		@media (max-width:$mobile){
+			 padding-bottom: percent(55,250); 
+		}
+		img {
+			object-fit: contain;
+			
+		}
+	}
+
+	&__article {
+		@include adaptiveValue("margin-top", 40, 30,1280,320,1);
+		p {
+			line-height: 1.5;
+			&:not(:last-child) {
+				margin-bottom:25px;
+			}
+			span {
+				font-weight: 600;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		@include adaptiveValue("margin-top", 45, 25,1280,320,1);
+	}
+
+	&__navigation {
+		display: grid;
+		grid-template-columns: repeat(2,25px);
+		justify-content: space-between;
+		position: absolute;
+		//z-index: -1;
+		//@include adaptiveValue("top", 220,155,1280,768,1 );
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		@media (max-width:$mobile){
+			//@include adaptiveValue("top", 180,150,767,320,1 );
+		}
+	}
+
+	&__img {
+		margin-top: 20px;
+		width: 100%;
+		padding-bottom: percent(2959,7924);
+	}
+}
+
+/*==========HISTORY============*/
+
+.page {
+
+	&__history {
+		@include adaptiveValue("margin-top", 40, 20,1280,320,1);
+		position: relative;
+	}
+}
+.history {
+
+	&__container {
+	}
+
+	&__title {
+		&::before,&::after {
+			@include adaptiveValue("width", 560,100,1280,320,1);
+		}
+	}
+
+	&__body {
+		@include adaptiveValue("margin-top", 50, 40,1280,320,1);
+	}
+}
+
+.body-history {
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__slider-thumbs {
+		width: 50%;
+  		margin-left: auto;
+		margin-right: 15px;
+	}
+
+	&__navigation {
+		display: grid;
+		grid-template-columns: repeat(2,12px);
+		justify-content: space-between;
+		position: absolute;
+		//z-index: -1;
+		//@include adaptiveValue("top", 220,155,1280,768,1 );
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		width: 54%;
+		button {
+			cursor: pointer;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 15px 10px 15px 0;
+			border-color: transparent rgb(215,215,215) transparent transparent;
+			&.body-history-arrow_next{
+				transform: rotate(180deg);
+			}
+		}
+		@media (max-width:$mobile){
+			 display: none; 
+		}
+	}
+
+	&__slider {
+		
+	}
+
+	&__swiper {
+	}
+
+	&__slide {
+		display:flex;
+	}
+
+	&__img {
+		flex: 0 0 percent(560,1250);
+		padding-bottom: percent(255,1250);
+	}
+
+	&__content {
+		p {
+			display: block;
+			border: 2px solid $mainorange;
+			width: 100%;
+   		//margin-right: 48px;
+			// adaptiveValue("margin-right", 50, 15,1280,768,1);
+			//margin-left: auto;
+			line-height: 1.5;
+			padding: 45px 20px;
+			span {
+				font-weight: 600;
+			}
+		}
+	}
+}
+.thumbs-history {
 
 	&__swiper {
 	}
@@ -140,15 +317,38 @@
 	&__slide {
 	}
 
-	&__article {
+	&__btn {
+		font-size: rem(16);
+		padding: 10px 10px;
+		background-color: rgb(215,215,215);
+		transition: background-color 0.5s;
+		.swiper-slide-thumb-active & {
+			background-color: $mainorange;
+		}
+	}
+}
+.body-history-arrows {
+}
+.body-history-arrow {
+
+	&_prev {
 	}
 
-	&__navigation {
-		//display: flex;
-		button {
-			width: 20px;
-			height: 20px;
-			background-color: red;
+	&_next {
+	}
+}
+.body-history__swiper {
+	& .swiper-slide{
+		& .body-history__content {
+			opacity: 0;
+			transition: transform 0.5s;
+			transform: translateY(30px);
+		}
+	}
+	& .swiper-slide-active{
+		& .body-history__content {
+			opacity: 1;
+			transform: translateY(0px);
 		}
 	}
 }

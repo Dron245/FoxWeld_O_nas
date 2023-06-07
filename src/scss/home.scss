@@ -218,8 +218,10 @@
 .page {
 
 	&__history {
-		@include adaptiveValue("margin-top", 40, 20,1280,320,1);
+		@include adaptiveValue("padding-top", 40, 20,1280,320,1);
+		@include adaptiveValue("padding-bottom", 30, 25,1280,320,1);
 		position: relative;
+		background-color: rgb(248,248,248);
 	}
 }
 .history {
@@ -248,6 +250,10 @@
 		width: 50%;
   		margin-left: auto;
 		margin-right: 15px;
+		@media (max-width:$mobile){
+			 width: 100%;
+			 height: 117px;
+		}
 	}
 
 	&__navigation {
@@ -282,18 +288,30 @@
 	}
 
 	&__swiper {
+		@media (max-width:$mobile){
+			 //flex-wrap: wrap; 
+		}
 	}
 
 	&__slide {
 		display:flex;
+		@media (max-width:$mobile){
+			 flex-direction: column;
+			 margin-top: 15px;
+			}
 	}
 
 	&__img {
 		flex: 0 0 percent(560,1250);
 		padding-bottom: percent(255,1250);
+		@media (max-width:$mobile){
+			 width: 100%;
+			 padding-bottom: percent(140,320);
+		}
 	}
 
 	&__content {
+		flex: 1;
 		p {
 			display: block;
 			border: 2px solid $mainorange;
@@ -306,24 +324,42 @@
 			span {
 				font-weight: 600;
 			}
+			@media (max-width:$mobile){
+				 border: none; 
+				 padding: 25px 15px;
+			}
 		}
 	}
 }
 .thumbs-history {
 
 	&__swiper {
+		@media (max-width:$mobile){
+			 //display: grid !important;
+			 flex-wrap: wrap;
+		}
 	}
 
 	&__slide {
+		@media (max-width:$mobile){
+			 height: 32px;
+			 display: flex;
+			 justify-content: center;
+		}
 	}
 
 	&__btn {
 		font-size: rem(16);
+		font-weight: 600;
 		padding: 10px 10px;
 		background-color: rgb(215,215,215);
 		transition: background-color 0.5s;
+		@media (max-width:$mobile){
+			 background-color: initial; 
+		}
 		.swiper-slide-thumb-active & {
 			background-color: $mainorange;
+			color: white;
 		}
 	}
 }

@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Thumbs, EffectFade } from 'swiper';
+import Swiper, { Navigation, Thumbs, EffectFade, Grid } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -118,7 +118,7 @@ function initSliders() {
 		const thumbsHistory = new Swiper('.thumbs-history', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Thumbs],
+			modules: [Navigation, Thumbs, Grid, EffectFade],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 6,
@@ -128,18 +128,18 @@ function initSliders() {
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			loop: true,
+			//loop: true,
 			//preloadImages: false,
 			//lazy: true,
-
-			/*
+			
+			
 			// Эффекты
-			effect: 'fade',
+			//effect: 'fade',
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
+			
 
 			// Пагинация
 			/*
@@ -165,17 +165,21 @@ function initSliders() {
 
 			// Брейкпоинты
 			
-			/*breakpoints: {
+			breakpoints: {
 				320: {
 					slidesPerView: 3,
+					spaceBetween: 0,
+					autoHeight: false,
+					grid: {
+						//rows:3,
+						column:2
+					},
+				},
+				768: {
+					slidesPerView: 6,
 					spaceBetween: 10,
-					autoHeight: true,
 				},
-				778: {
-					slidesPerView: 5,
-					spaceBetween: 30,
-				},
-			},*/
+			},
 			
 			// События
 			on: {
@@ -192,19 +196,19 @@ function initSliders() {
 			},
 			observeParents: true,
 			slidesPerView: 1,
-			spaceBetween: 10,
+			//spaceBetween: 10,
 			autoHeight: true,
 			speed: 800,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			loop: true,
+			//loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
 			
 			// Эффекты
-			effect: 'fade',
+			//effect: 'fade',
 			autoplay: {
 				//delay: 3000,
 				//disableOnInteraction: false,

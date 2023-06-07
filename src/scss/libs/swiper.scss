@@ -56,7 +56,13 @@
 	height: 100%;
 	position: relative;
 	transition-property: transform;
+	@media (max-width:768px){
+		 &.thumbs-history__slide {
+			height: 39px;
+		 } 
+	}
 }
+
 .swiper-slide-invisible-blank {
 	visibility: hidden;
 }

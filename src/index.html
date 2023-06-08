@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
+	
 	<body>
 		<div class="wrapper">
-			@@include('html/_header.htm',{})
+			
 			<main class="page">
 				
 				<section class="page__navigation navigation">
@@ -60,10 +58,12 @@
 						</ul>
 					</div>
 					<div class="company__video">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/oDHpupTjo-k" 
+						<div class="company__wrapper">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/oDHpupTjo-k" 
 						title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 						 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 						  allowfullscreen></iframe>
+						</div>
 					</div>
 				</section>
 				<section id="production" class="page__production production">
@@ -330,8 +330,8 @@
 								</div>
 							</div>
 							<div class="production__navigation partners__navigation slider-arrows">
-								<button type="button" class="slider-arrow slider-arrow_prev"></button>
-								<button type="button" class="slider-arrow slider-arrow_next"></button>
+								<button type="button" class="slider-arrow partners-arrow_prev slider-arrow_prev"></button>
+								<button type="button" class="slider-arrow partners-arrow_next slider-arrow_next"></button>
 							</div>
 						</div>
 						<p class="partners__text text">Компания Foxweld ищет новых партнеров и приглашает к сотрудничеству дилеров, оптовые компании, розничные сети и интернет-магазины.</p>
@@ -354,10 +354,34 @@
 						</div>
 					</div>
 				</section>
+				<section id="thanks" class="page__thanks thanks">
+					<div class="thanks__container">
+						<span class="thanks__title title">Благодарности</span>
+						<div class="thanks__wrapper">
+							<div class="thanks__slider">
+								<div class="thanks__swiper">
+									<div class="thanks__slide -ibg">
+										<img src="@img/thanks/Благодарственное письмо 1.jpg" alt="Благодарственное письмо">
+									</div>
+									<div class="thanks__slide -ibg">
+										<img src="@img/thanks/Благодарственное письмо 2.jpg" alt="Благодарственное письмо">
+									</div>
+									<div class="thanks__slide -ibg">
+										<img src="@img/thanks/Благодарственное письмо 3.jpg" alt="Благодарственное письмо">
+									</div>
+								</div>
+							</div>
+							<div class="production__navigation thanks__navigation slider-arrows">
+								<button type="button" class="slider-arrow thanks__prev slider-arrow_prev"></button>
+								<button type="button" class="slider-arrow thanks__next slider-arrow_next"></button>
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
-			@@include('html/_footer.htm',{})
+			
 		</div>
-		@@include('html/_popup.htm',{})
+		
 		@@include('html/_js.htm',{})
 	</body>
 </html>

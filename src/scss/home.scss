@@ -28,12 +28,19 @@
 		flex-direction: column;
 		justify-content: center;
 		gap: 10px;
+		animation: qwe infinite;
+		animation-duration: 4s;
 		@media (max-width:$mobile){
 			 flex: 0 0 16.67%; 
 		}
+		@keyframes qwe {
+			0%, 100% {transform: translateY(0);}
+			50% {transform: translateY(-20px);}
+		}
 		&:hover{
-			& .navigation__img {
-				transform: translateY(-20px);
+			animation: initial;
+			& span {
+				color: $mainorange;
 			}
 		}
 		span {
@@ -43,7 +50,7 @@
 			transition: color 0.5s;
 			@include adaptiveValue("font-size", 14, 10,1280,768,1);
 			&:hover{
-				color: $mainorange;
+				//color: $mainorange;
 			}
 			@media (max-width:$mobile){
 				 display: none; 
@@ -76,7 +83,7 @@
 	&__item {
 		display: flex;
 		align-items: center;
-		font-size: 12px;
+		//font-size: 12px;
 		position: relative;
 		&:not(:last-child) {
 			margin-bottom: 20px;
@@ -95,11 +102,12 @@
 
 	&__video {
 		@include adaptiveValue("margin-top", 50, 23,1280,320,1);
-		position: relative;
-		width: percent(1000,1280);
+		//position: relative;
+		//width: percent(1000,1280);
 		margin: 0 auto;
-		padding-bottom: percent(590,1280);
-		height: 0;
+		max-width: 1024px;
+		
+		//height: 0;
 		iframe {
 			position: absolute;
 			top: 0;
@@ -108,6 +116,13 @@
 			height: 100%;
 			object-fit: cover;
 		}
+	}
+
+	&__wrapper {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding-bottom: percent(590,1280);
 	}
 }
 
@@ -146,14 +161,36 @@
 		//width: 100%;
 		@include adaptiveValue("margin-left", -8, -4,1);
 		@include adaptiveValue("margin-left", -8, -4,1);
-		@include adaptiveValue("padding", 8, 4,1280,320,1) ;
+		@include adaptiveValue("padding", 8, 4,1280,320,1);
+		//box-shadow: 0px 0px 0px 0px rgba(34, 60, 80, 0.2);
 	}
 
 	&__swiper {
+		@media (min-width:$mobile){
+			 //display: flex;
+			 //justify-content: center; 
+		}
 		
 	}
 
 	&__slide {
+	// 	@media (min-width:$mobile){
+	// 		 flex: 0 0 15%;
+	// 		 padding-bottom: 40%;
+	// 	}
+	// 	animation-duration: 3s;
+   //  animation-timing-function: linear;
+   //  animation-delay: 0s;
+   //  animation-iteration-count: infinite;
+   //  animation-direction: normal;
+   //  animation-fill-mode: none;
+   //  animation-play-state: running;
+   //  animation-name: ticker;
+	//  @keyframes ticker {
+		
+	// 	0% {transform: translateZ(0);}
+	// 	100% {transform: translate3d(-100%,0,0);}
+	//  }
 		//width: percent(190,1233);
 		padding-bottom: percent(150,1233);
 		box-shadow: 0px 0px 0px 0px rgba(34, 60, 80, 0.2);
@@ -276,6 +313,7 @@
 			border-color: transparent rgb(215,215,215) transparent transparent;
 			&.body-history-arrow_next{
 				transform: rotate(180deg);
+				
 			}
 		}
 		@media (max-width:$mobile){
@@ -298,6 +336,9 @@
 		@media (max-width:$mobile){
 			 flex-direction: column;
 			 margin-top: 15px;
+			 img {
+				//object-fit: contain;
+			 }
 			}
 	}
 
@@ -376,6 +417,9 @@
 .body-history__swiper {
 	& .swiper-slide{
 		& .body-history__content {
+			@media (max-width:$mobile){
+				 min-height: 150px; 
+			}
 			opacity: 0;
 			transition: transform 0.5s;
 			transform: translateY(30px);
@@ -620,17 +664,87 @@
 
 	&__btn {
 		background-color: white;
-		padding: 10px 50px;
 		text-align: center;
-		@media (max-width:$mobile){
-			 padding: 8px 25px; 
-		}
 		button {
+			padding: 10px 50px;
 			font-weight: 600;
+			@media (max-width:$mobile){
+				padding: 8px 25px; 
+		  }
 			@include adaptiveValue("font-size", 14,10,1280,320,1 );
 		}
 	}
 }
+
+
+/*===========THANKS================*/
+
+.page {
+
+	&__thanks {
+		@include adaptiveValue("margin-top", 30, 20,1280,320,1);
+		margin-bottom: 40px;
+	}
+}
+.thanks {
+
+	&__container {
+	}
+
+	&__title {
+		&::before,&::after {
+			@include adaptiveValue("width", 535,75,1280,320,1);
+		}
+	}
+
+	&__wrapper {
+		@include adaptiveValue("margin-top", 80, 25,1280,320,1);
+		position: relative;
+	}
+
+	&__slider {
+		max-width: percent(1171,1280);
+		margin-left: auto;
+		margin-right: auto;
+		//@include adaptiveValue("margin-left", -8, -4,1);
+		//@include adaptiveValue("margin-left", -8, -4,1);
+		@include adaptiveValue("padding", 8, 4,1280,320,1);
+		
+		@media (max-width:$mobile){
+			max-width: percent(227,290);
+		}
+	}
+
+	&__swiper {
+		@media (min-width:$mobile){
+			display: flex;
+			justify-content: space-between;
+			align-items: center; 
+		}
+	}
+
+	&__slide {
+		width: percent(290,1280);
+		padding-bottom: percent(393,1250);
+		box-shadow: -6px 6px 20px 0px rgba(34, 60, 80, 0.2);
+		&:not(:last-child) {
+			//@include adaptiveValue("margin-right", 220, 40,1280,768,1);
+		}
+		@media (max-width:$mobile){
+			 padding-bottom:percent(138,230) ; 
+		}
+	}
+
+	&__navigation {
+		& .swiper-button-disabled {
+			opacity: 0;
+		}
+		@media (min-width:$mobile){
+			 display: none; 
+		}
+	}
+}
+
 
 
 

@@ -56,6 +56,14 @@
 	height: 100%;
 	position: relative;
 	transition-property: transform;
+	@media (min-width:768px){
+		 .thanks__swiper & {
+			width: 22.25625%;
+		 }
+		//  .production__swiper & {
+		// 	width: 20%;
+		//  }
+	}
 	@media (max-width:768px){
 		 &.thumbs-history__slide {
 			height: 39px;

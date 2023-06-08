@@ -44,6 +44,9 @@ button.slider-arrow {
 	border-color: transparent rgb(215,215,215) transparent transparent;
 	&.slider-arrow_next{
 		transform: rotate(180deg);
+		@media (max-width:$mobile){
+			justify-self: end; 
+	  }
 	}
 	@media (max-width:$mobile){
 		border-width: 25px 10px 25px 0;

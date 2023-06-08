@@ -249,7 +249,7 @@
 	&__slider-thumbs {
 		width: 50%;
   		margin-left: auto;
-		margin-right: 15px;
+		margin-right: 16.5px;
 		@media (max-width:$mobile){
 			 width: 100%;
 			 height: 117px;
@@ -388,3 +388,253 @@
 		}
 	}
 }
+
+/*============NUMBERS================*/
+
+.page {
+
+	&__numbers {
+		@include adaptiveValue("margin-top", 50, 23,1280,320,1);
+	}
+}
+.numbers {
+
+	&__container {
+		position: relative;
+	}
+
+	&__title {
+		&::before,&::after {
+			@include adaptiveValue("width", 550,100,1280,320,1);
+		}
+	}
+
+	&__body {
+		@include adaptiveValue("margin-top", 100, 25,1280,320,1);
+		@media (max-width:$mobile){
+			 display: flex;
+			 flex-direction: column-reverse;
+			 align-items: center;
+		}
+	}
+
+	&__content {
+		padding: 85px 800px 85px 50px;
+		@include adaptiveValue("padding-right", 800, 530,1280,769,1);
+		background: rgb(255,255,255);
+		background: linear-gradient(90deg, rgba(255,255,255,1) 28%, rgba(248,229,214,1) 100%);
+		@media (max-width:$mobile){
+			 padding: 0;
+			 text-align: center;
+			 background: white;
+			 margin-top: 20px;
+		}
+	}
+
+	&__subtitle {
+		@include adaptiveValue("font-size", 16, 14,1280,320,1);
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	&__text {
+		@include adaptiveValue("margin-top", 32, 22,1280,320,1);
+		line-height: 1.5;
+	}
+
+	&__grid {
+		position: absolute;
+		right: 50px;
+		top: 50px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0px 6px 7px 5px rgba(0, 0, 0, 0.15);
+		@media (max-width:$mobile){
+			 position: initial;
+			 width: fit-content;
+		}
+	}
+}
+
+.grid {
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		//justify-content: center;
+		//width: 230px;
+		//height: 230px;
+		@include adaptiveValue("width", 230, 100,1280,320,1);
+		@include adaptiveValue("height", 230, 100,1280,320,1);
+		transition: all 0.5s;
+		&:nth-child(odd){
+			background-color: rgb(241,241,241);
+		}
+		&:nth-child(even){
+			background-color: rgb(255, 255, 255);
+		}
+		&:hover{
+			background-color: $mainorange;
+			justify-content: center;
+			& .grid__number {
+				color: white;
+				display: none;
+			}
+			& .grid__article {
+				color: white;
+				display: none;
+			}
+			& .grid__text {
+				display: block;
+				opacity: 1;
+				color: white;
+			}
+		}
+	}
+
+	&__number {
+		@include adaptiveValue("margin-top", 50, 20,1280,320,1);
+		@include adaptiveValue("font-size", 45, 20,1280,320,1);
+		font-weight: 600;
+		color: $mainorange;
+		transition: color 0.5s;
+		&:hover{
+			color: white;
+		}
+	}
+
+	&__article {
+		@include adaptiveValue("margin-top", 27, 10,1280,320,1);
+		@include adaptiveValue("font-size", 14, 8,1280,320,1);
+		color: $mainorange;
+		text-align: center;
+		text-transform: uppercase;
+		transition: color 0.5s;
+		line-height: 1.5;
+	}
+
+	&__text {
+		opacity: 0;
+		display: none;
+		overflow-y: auto;
+		@include adaptiveValue("font-size", 12, 7,1280,320,1);
+		transition: color 0.5s;
+		text-align: center;
+		color: $mainorange;
+		line-height: 1.5;
+		@media (max-width:$mobile){
+			 line-height: 1.1; 
+		}
+		span {
+			font-weight: 600;
+		}
+	}
+}
+
+/*=========PARTNERS============*/
+
+.page {
+
+	&__partners {
+		@include adaptiveValue("margin-top", 150, 23,1280,320,1);
+	}
+}
+.partners {
+
+	&__container {
+		p {
+			@include adaptiveValue("margin-top", 30, 20,1280,320,1);
+			line-height: 1.5;
+			@include adaptiveValue("font-size", 16, 12,1280,320,1);
+		}
+	}
+
+	&__title {
+		&::before,&::after {
+			@include adaptiveValue("width", 550,100,1280,320,1);
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+		
+	}
+
+	&__slider {
+		max-width: percent(250,320);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__swiper {
+	}
+
+	&__slide {
+		padding-bottom: 20.1%;
+		img {
+			object-fit: contain;
+		}
+	}
+}
+
+/*===========CONTACTS===========*/
+
+.page {
+
+	&__contact {
+		margin-top: 20px;
+	}
+}
+.contact {
+
+	&__container {
+		@media (max-width:$mobile){
+			padding-left: 10px;
+			padding-right: 10px; 
+		}
+	}
+
+	&__body {
+		padding: 25px 190px;
+		@include adaptiveValue("padding-left", 190, 8,1280,320,1);
+		@include adaptiveValue("padding-right", 190, 8,1280,320,1);
+		background-color: $mainorange;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__text {
+		@include adaptiveValue("font-size", 14,9,1280,320,1 );
+		flex: 0 0 60%;
+		color: white;
+		line-height: 1.5;
+		span {
+			font-weight: 600;
+		}
+	}
+
+	&__btn {
+		background-color: white;
+		padding: 10px 50px;
+		text-align: center;
+		@media (max-width:$mobile){
+			 padding: 8px 25px; 
+		}
+		button {
+			font-weight: 600;
+			@include adaptiveValue("font-size", 14,10,1280,320,1 );
+		}
+	}
+}
+
+
+
+
+
+
+

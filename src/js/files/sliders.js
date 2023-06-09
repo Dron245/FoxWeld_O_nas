@@ -94,8 +94,8 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.slider-arrow_prev',
-				nextEl: '.slider-arrow_next',
+				prevEl: '.production-arrow_prev',
+				nextEl: '.production-arrow_next',
 			},
 
 			// Брейкпоинты

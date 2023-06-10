@@ -113,11 +113,13 @@
 		//height: 0;
 		iframe {
 			position: absolute;
+			max-width: 1024px;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			
 		}
 	}
 
@@ -126,6 +128,18 @@
 		width: 100%;
 		height: 100%;
 		padding-bottom: percent(590,1280);
+		&::before{
+				content:'';
+				position: absolute;
+				left: -9999px;
+				right: -9999px;
+				top: -15px;
+				bottom: -15px;
+				z-index: 0;
+				//width: 100%;
+				//height: 100%;
+				background: rgb(248, 248, 248);
+			}
 	}
 }
 
@@ -177,6 +191,7 @@
 	}
 
 	&__slide {
+		display: block;
 	// 	@media (min-width:$mobile){
 	// 		 flex: 0 0 15%;
 	// 		 padding-bottom: 40%;
@@ -229,7 +244,7 @@
 		align-items: center;
 		position: relative;
 		& .production__navigation {
-			display: none;
+			//display: none;
 		}
 		@include adaptiveValue("margin-top", 45, 25,1280,320,1);
 	}
@@ -265,7 +280,7 @@
 		@include adaptiveValue("padding-top", 40, 20,1280,320,1);
 		@include adaptiveValue("padding-bottom", 20, 12,1280,320,1);
 		position: relative;
-		background-color: rgb(248,248,248);
+		background: rgb(248,248,248);
 	}
 }
 .history {
@@ -721,20 +736,22 @@
 
 	&__link {
 		display: inline-block;
-			padding: 10px 50px;
-			font-weight: 600;
-			color: white;
-			border: 2px solid white;
-			transition: background-size .5s, color .5s, border .5s;
-			background-image: linear-gradient(red, red);
-			background-repeat: no-repeat;
-			background-size: 0 100%;
-			background-position: 0% 50%;
-			&:hover{
-				background-size: 100% 100%;
-				color: white;
-				border: 2px solid red
-			};
+			padding: 10px 40px;
+			//font-weight: 600;
+			color: $mainorange;
+			//border: 2px solid white;
+			//transition: background-size .5s, color .5s, border .5s;
+			//background-image: linear-gradient(red, red);
+			//background-repeat: no-repeat;
+			//background-size: 0 100%;
+			//background-position: 0% 50%;
+			background-color: #fff;
+			text-transform: uppercase;
+			// &:hover{
+			// 	background-size: 100% 100%;
+			// 	color: white;
+			// 	border: 2px solid red
+			// };
 			@media (max-width:$mobile){
 				padding: 8px 25px; 
 		  }

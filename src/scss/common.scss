@@ -6,24 +6,22 @@
 	// text-align: center;
 	//margin: 0 auto;
 	text-align: center;
-	
+	position: relative;
 	//@include adaptiveValue("font-size", 20, 16,1280,320,1);
 	font-size: rem(20);
 	text-transform: uppercase;
-	span {
-		position: relative;
-		padding: 0px 8px;
-		&::before,&::after {
+	&::before,&::after {
 		content:'';
 		position: absolute;
-		
+		//z-index: 0;
 		top: 50%;
-		transform: translateY(-50%);
-		height: 2px;
-		background-color: $mainColor;
-		transform: rotateZ(180deg);
+		//transform: translateY(-50%);
+		height: 1px;
+		//background-color: $mainColor;
+		background-color: #878289;
+		//transform: rotateZ(180deg);
 		//@include adaptiveValue("width", 490,65,1280,320,1);
-		width: 5000px;
+		width: 100%;
 	}
 	&::before{
 		right: 0;
@@ -35,6 +33,11 @@
 		
 		transform-origin: left;
 	}
+	span {
+		position: relative;
+		padding: 0px 20px;
+		z-index: 2;
+		background-color: white;
 	}
 	
 }

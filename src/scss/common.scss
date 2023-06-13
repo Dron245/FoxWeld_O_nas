@@ -1,30 +1,47 @@
 // Заголовки, общие БЄМ блоки и проче...
 .title {
-	display: flex;
-	justify-content: center;
+	//display: flex;
+	display: block;
+	// justify-content: center;
+	// text-align: center;
+	//margin: 0 auto;
 	text-align: center;
-	position: relative;
-	@include adaptiveValue("font-size", 21, 14,1280,320,1);
+	
+	//@include adaptiveValue("font-size", 20, 16,1280,320,1);
+	font-size: rem(20);
 	text-transform: uppercase;
-	&::before,&::after {
+	span {
+		position: relative;
+		padding: 0px 8px;
+		&::before,&::after {
 		content:'';
 		position: absolute;
+		
 		top: 50%;
 		transform: translateY(-50%);
 		height: 2px;
 		background-color: $mainColor;
-		@include adaptiveValue("width", 490,65,1280,320,1);
+		transform: rotateZ(180deg);
+		//@include adaptiveValue("width", 490,65,1280,320,1);
+		width: 5000px;
 	}
 	&::before{
-		left: 0;
+		right: 0;
+		
+		transform-origin: right;
 	}
 	&::after{
-		right: 0;
+		left: 0;
+		
+		transform-origin: left;
 	}
+	}
+	
 }
 .text {
 	@include adaptiveValue("margin-top", 45, 25,1280,320,1);
-	@include adaptiveValue("font-size", 21, 12,1280,320,1);
+	//@include adaptiveValue("font-size", 20, 16,1280,320,1);
+	font-size: rem(20);
 	line-height: 1.5;
 	text-transform: uppercase;
 	span {

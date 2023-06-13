@@ -16,7 +16,7 @@ window.addEventListener("load", windowLoad);
 		}
 		function digitsCountersAnimate(digitsCounter) {
 			let startTimestamp = null
-			const duration = parseInt(digitsCounter.dataset.digitsCounter) ? parseInt(digitsCounter.dataset.digitsCounter) : 1000;
+			const duration = parseInt(digitsCounter.dataset.digitsCounter) ? parseInt(digitsCounter.dataset.digitsCounter) : 1500;
 			const startValue = parseInt(digitsCounter.innerHTML);
 			const startPosition = 0;
 			const step = (timestamp) => {
@@ -32,7 +32,7 @@ window.addEventListener("load", windowLoad);
 		//digitsCountersInit()
 
 		let options = {
-			threshold: 0.3
+			threshold: 0.5
 		}
 		let observer = new IntersectionObserver((entries, observer) =>{
 			entries.forEach(entry => {

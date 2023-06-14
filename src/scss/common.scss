@@ -10,6 +10,9 @@
 	//@include adaptiveValue("font-size", 20, 16,1280,320,1);
 	font-size: rem(20);
 	text-transform: uppercase;
+	@media (max-width:$mobile){
+		 font-size: 18px; 
+	}
 	&::before,&::after {
 		content:'';
 		position: absolute;
@@ -38,20 +41,29 @@
 		padding: 0px 20px;
 		z-index: 2;
 		background-color: white;
+		&.title-bg {
+			background-color: #f8f8f8;
+		}
 	}
 	
 }
+
+// .title-bg {
+// 	background: $mainColor
+// }
 .text {
 	@include adaptiveValue("margin-top", 45, 25,1280,320,1);
 	//@include adaptiveValue("font-size", 20, 16,1280,320,1);
 	font-size: rem(20);
+
 	line-height: 1.5;
 	text-transform: uppercase;
 	span {
 		font-weight: 600;
 	}
 	@media (max-width:$mobile){
-		 text-align: center; 
+		 text-align: center;
+		 font-size: rem(18);
 	}
 }
 

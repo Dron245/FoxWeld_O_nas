@@ -5,6 +5,10 @@
 .o_nas .main-content {
 	max-width: 100% !important; 
 	z-index: auto !important;
+	@media (max-width:$mobile){
+		 margin-left: -15px !important;
+		 margin-right: -15px !important; 
+	}
 }
 //==========NAVIGATION==========================================================================================
 .page {
@@ -78,19 +82,22 @@
 .page {
 
 	&__company {
-		@include adaptiveValue("margin-top", 60, 20,1280,320,1);
+		@include adaptiveValue("margin-top", 70, 30,1280,320,1);
 	}
 }
 .company {
 
 	&__list {
 		@include adaptiveValue("margin-top", 50, 23,1280,320,1);
-		padding: 0px 15px;
+		//padding: 0px 15px;
+		@media (max-width:$mobile){
+			 //text-align: center; 
+		}
 	}
 
 	&__item {
 		display: flex;
-		align-items: center;
+		//align-items: center;
 		//font-size: 16px;
 		position: relative;
 		&:not(:last-child) {
@@ -106,36 +113,31 @@
 			width: 5px;
 			height: 5px;
 			margin-right: 10px;
+			margin-top: 9px;
 			border-radius: 50%;
 			background-color: $mainColor;
 		}
 	}
 
-	&__video {
-		@include adaptiveValue("margin-top", 50, 23,1280,320,1);
-		//position: relative;
-		//width: percent(1000,1280);
-		margin: 0 auto;
-		max-width: 1024px;
-		
-		//height: 0;
-		iframe {
-			position: absolute;
-			max-width: 1024px;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		@media (max-width:$mobile){
+			 margin: 0px -15px; 
 		}
 	}
 
-	&__wrapper {
+	&__img {
+		@include adaptiveValue("margin-top", 50, 23,1280,320,1);
+		//display: inline-block;
+		//text-align: center;
 		position: relative;
-		width: 100%;
-		height: 100%;
-		padding-bottom: percent(590,1280);
+		img {
+			width: 100%;
+			height: auto;
+			position: relative;
+			z-index: 2;
+		}
 		&::before{
 				content:'';
 				position: absolute;
@@ -149,6 +151,8 @@
 				background: rgb(248, 248, 248);
 			}
 	}
+
+	
 }
 
 
@@ -157,7 +161,8 @@
 .page {
 
 	&__production {
-		@include adaptiveValue("margin-top", 50, 23,1280,320,1);
+		@include adaptiveValue("margin-top", 70, 30,1280,320,1);
+		margin-bottom: 20px;
 	}
 }
 .production {
@@ -173,8 +178,10 @@
 		// }
 		}
 
-	&__text {
-
+	&__article {
+		@media (max-width:$mobile){
+			 text-align: center; 
+		}
 	}
 
 	&__slider {
@@ -222,7 +229,7 @@
 		box-shadow: 0px 0px 0px 0px rgba(34, 60, 80, 0.2);
 			transition: box-shadow 0.5s;
 			&:hover{
-				box-shadow: -2px 2px 4px 0px rgba(34, 60, 80, 0.2);
+				box-shadow: -2px 2px 5px 0px rgba(34, 60, 80, 0.2);
 			}
 		@media (max-width:$mobile){
 			 padding-bottom: percent(55,250); 
@@ -285,7 +292,7 @@
 .page {
 
 	&__history {
-		@include adaptiveValue("padding-top", 40, 20,1280,320,1);
+		@include adaptiveValue("padding-top", 70, 30,1280,320,1);
 		@include adaptiveValue("padding-bottom", 20, 12,1280,320,1);
 		position: relative;
 		background: rgb(248,248,248);
@@ -440,7 +447,8 @@
 	& .swiper-slide{
 		& .body-history__content {
 			@media (max-width:$mobile){
-				 min-height: 120px; 
+				 min-height: 120px;
+				 text-align: center;
 			}
 			opacity: 0;
 			transition: transform 0.5s;
@@ -460,7 +468,8 @@
 .page {
 
 	&__numbers {
-		@include adaptiveValue("margin-top", 50, 23,1280,320,1);
+		@include adaptiveValue("margin-top", 70, 30,1280,320,1);
+		margin-bottom: 20px;
 	}
 }
 .numbers {
@@ -654,7 +663,9 @@
 .page {
 
 	&__partners {
-		@include adaptiveValue("margin-top", 150, 23,1280,320,1);
+		//@include adaptiveValue("margin-top", 150, 23,1280,320,1);
+		@include adaptiveValue("padding-top", 70, 30,1280,320,1);
+		@include adaptiveValue("padding-bottom", 20, 12,1280,320,1);
 		background: rgb(248,248,248);
 	}
 }
@@ -666,6 +677,7 @@
 			//@include adaptiveValue("font-size", 16, 12,1280,320,1);
 			br{display: none;}
 			@media (max-width:$mobile){
+				text-align: center;
 				 br {
 					display: initial;
 				 } 
@@ -706,15 +718,15 @@
 .page {
 
 	&__contact {
-		margin-top: 20px;
+		//margin-top: 20px;
+		//@include adaptiveValue("margin-top", 70, 30,1280,320,1);
 	}
 }
 .contact {
 
 	&__container {
 		@media (max-width:$mobile){
-			padding-left: 10px;
-			padding-right: 10px; 
+			
 		}
 	}
 
@@ -726,6 +738,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@media (max-width:$mobile){
+			  padding-left: 10px;
+			padding-right: 10px; 
+		}
 	}
 
 	&__text {
@@ -776,8 +792,8 @@
 .page {
 
 	&__thanks {
-		@include adaptiveValue("margin-top", 30, 20,1280,320,1);
-		margin-bottom: 40px;
+		@include adaptiveValue("margin-top", 70, 30,1280,320,1);
+		margin-bottom: 70px;
 	}
 }
 .thanks {
@@ -792,7 +808,7 @@
 	}
 
 	&__wrapper {
-		@include adaptiveValue("margin-top", 80, 25,1280,320,1);
+		@include adaptiveValue("margin-top", 70, 25,1280,320,1);
 		position: relative;
 	}
 
@@ -820,7 +836,7 @@
 	&__slide {
 		width: percent(290,1280);
 		padding-bottom: percent(393,1250);
-		box-shadow: -6px 6px 20px 0px rgba(34, 60, 80, 0.2);
+		box-shadow: -2px 2px 5px 0px rgba(34, 60, 80, 0.2);
 		&:not(:last-child) {
 			//@include adaptiveValue("margin-right", 220, 40,1280,768,1);
 		}

@@ -5,16 +5,16 @@
 .o_nas .main-content {
 	max-width: 100% !important; 
 	z-index: auto !important;
-	@media (max-width:$mobile){
-		 margin-left: -15px !important;
-		 margin-right: -15px !important; 
+	@media (max-width: 1195px){
+		margin-left: 0px !important;
+		 margin-right: 0px !important; 
 	}
 }
 //==========NAVIGATION==========================================================================================
 .page {
 
 	&__navigation {
-		margin-top: 20px;
+		margin-top: 40px;
 	}
 }
 .navigation {
@@ -724,7 +724,11 @@
 }
 .contact {
 
-	&__container {
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1280px;
 		@media (max-width:$mobile){
 			
 		}
@@ -732,12 +736,12 @@
 
 	&__body {
 		padding: 25px 190px;
-		@include adaptiveValue("padding-left", 190, 8,1280,320,1);
-		@include adaptiveValue("padding-right", 190, 8,1280,320,1);
+		@include adaptiveValue("padding-left", 190, 11,1280,768,1);
+		@include adaptiveValue("padding-right", 190, 11,1280,768,1);
 		background-color: $mainorange;
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		justify-content: center;
+		//align-items: center;
 		@media (max-width:$mobile){
 			  padding-left: 10px;
 			padding-right: 10px; 

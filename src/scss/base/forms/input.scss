@@ -17,6 +17,7 @@ textarea {
 	&._form-focus {
 	}
 	&._form-error {
+		box-shadow: 0 0 3px red
 	}
 }
 textarea.input {

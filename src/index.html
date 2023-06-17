@@ -398,8 +398,47 @@
 						</div>
 					</div>
 				</section>
+				<section class="page__forms forms">
+					<div class="forms__container">
+						<div class="forms__wrapper">
+							<form data-dev data-popup-message="#form-message" class="form" action="#" class="forms__form" method="post">
+								<fieldset>
+									<legend class="form__legend">Личные данные</legend>
+									<div class="form__item">
+										<label for="name" class="form__label">Имя <span>*</span></label>
+										<input autocomplete="off" type="text" name="name" data-error="Ошибка" placeholder="" required class="form__input input">
+									</div>
+									<div class="form__item">
+										<label for="name" class="form__label">Фамилия <span>*</span></label> 
+										<input autocomplete="off" type="text" name="name" data-error="Ошибка" placeholder="" required class="form__input input">
+									</div>
+									<div class="form__item">
+										<label for="name" class="form__label">Контактный номер телефона <span>*</span></label>
+										<input autocomplete="off" type="tel" name="name" data-error="Ошибка" placeholder="" required class="form__input input">
+									</div>
+									<div class="form__item">
+										<label for="name" class="form__label">Электронная почта <span>*</span></label>
+										<input data-required="email" data-error="Введен не верный E-mail" autocomplete="off" type="email" name="name" data-error="Ошибка" placeholder="" required class="form__input input">
+									</div>
+								</fieldset>
+								<div class="form__agree">
+									<div class="form__item">
+										<div class="form__checkbox checkbox">
+											<input id="c_1" data-error="Ошибка" checked class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_1" class="checkbox__label">
+												<span class="checkbox__text">Я даю свое согласие на обработку персональных данных в соответствии с 
+													<a href="#">Условиями</a> <span>*</span>
+												</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<button type="submit" class="form__button button">Оставить запрос</button>
+							</form>
+						</div>
+					</div>
+				</section>
 			</main>
-			
 		</div>
 		@@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})

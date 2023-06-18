@@ -406,25 +406,25 @@
 									<legend class="form__legend">Личные данные</legend>
 									<div class="form__item">
 										<label for="name" class="form__label">Имя <span>*</span></label>
-										<input autocomplete="off" type="text" name="name" data-error="Ошибка" placeholder="" required class="form__input input">
+										<input  data-required autocomplete="off" type="text" name="name" data-error="Введите имя" placeholder=""  class="form__input input">
 									</div>
 									<div class="form__item">
 										<label for="name" class="form__label">Фамилия <span>*</span></label> 
-										<input autocomplete="off" type="text" name="name" data-error="Ошибка" placeholder="" required class="form__input input">
+										<input autocomplete="off" data-required type="text" name="name" data-error="Введите фамилию" placeholder=""  class="form__input input">
 									</div>
 									<div class="form__item">
 										<label for="name" class="form__label">Контактный номер телефона <span>*</span></label>
-										<input autocomplete="off" type="tel" name="name" data-error="Ошибка" placeholder="" required class="form__input input">
+										<input autocomplete="off" data-required type="tel" name="name" data-error="Введите номер телефона" placeholder=""  class="form__input input">
 									</div>
 									<div class="form__item">
 										<label for="name" class="form__label">Электронная почта <span>*</span></label>
-										<input data-required="email" data-error="Введен не верный E-mail" autocomplete="off" type="email" name="name" data-error="Ошибка" placeholder="" required class="form__input input">
+										<input data-required="email" data-error="Введен не верный E-mail" autocomplete="off" type="email" name="name" data-error="Ошибка" placeholder=""  class="form__input input">
 									</div>
 								</fieldset>
 								<div class="form__agree">
 									<div class="form__item">
 										<div class="form__checkbox checkbox">
-											<input id="c_1" data-error="Ошибка" checked class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<input id="c_1" data-error="Дайте согласие" checked class="checkbox__input" data-required type="checkbox" value="1" name="name">
 											<label for="c_1" class="checkbox__label">
 												<span class="checkbox__text">Я даю свое согласие на обработку персональных данных в соответствии с 
 													<a href="#">Условиями</a> <span>*</span>

@@ -54,3 +54,8 @@ window.addEventListener("load", windowLoad);
 			});
 		}
 	}
+
+
+	Fancybox.bind('[data-fancybox="gallery"]', {
+		hideScrollbar: false,
+	 });

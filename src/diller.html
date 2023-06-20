@@ -56,7 +56,7 @@
 						<form action="#" class="diller-form__form form-diller">
 							<div class="form-diller__body">
 								<span class="form-diller__firsttitle">АНКЕТА ДИЛЕРА</span>
-								<fieldset>
+								<fieldset >
 									<div class="form-diller__item">
 										<label class="form-diller__title">Имя <span>*</span></label>
 										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Иван" class="form-diller__input input">
@@ -90,8 +90,8 @@
 										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="ivanov.ru" class="form-diller__input input">
 									</div>
 								</fieldset>
-								<fieldset>
-									<legend class="form-diller__title">Вид деятельности предприятия (выберите один ответ)</legend>
+								<fieldset >
+									<legend class="form-diller__title">Вид деятельности предприятия <span class="otvet">(выберите один ответ)</span></legend>
 									<div class="form-diller__options options">
 										<div class="options__item">
 											<input hidden id="o_1" class="options__input" checked type="radio" value="1" name="option">
@@ -116,47 +116,51 @@
 									</div>
 								</fieldset>
 								<fieldset>
-									<legend class="form-diller__title">Какая продукция вам интересна? (Выберите один или несколько ответов)</legend>
+									<legend class="form-diller__title">Какая продукция вам интересна? <span class="otvet">(Выберите один или несколько ответов)</span></legend>
 									<div class="form-diller__check">
-										<div class="checkbox">
-											<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-											<label for="c_1" class="checkbox__label"><span class="checkbox__text">Сварочное оборудование, аксессуары, расходные материалы</span></label>
+										<div class="form-diller__group">
+											<div class="checkbox">
+												<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+												<label for="c_1" class="checkbox__label"><span class="checkbox__text">Сварочное оборудование,<br> аксессуары, расходные материалы</span></label>
+											</div>
+											<div class="checkbox">
+												<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="2" name="form[]">
+												<label for="c_2" class="checkbox__label"><span class="checkbox__text">Электрогенераторы</span></label>
+											</div>
+											<div class="checkbox">
+												<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3" name="form[]">
+												<label for="c_3" class="checkbox__label"><span class="checkbox__text">Компрессоры</span></label>
+											</div>
+											<div class="checkbox">
+												<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="4" name="form[]">
+												<label for="c_4" class="checkbox__label"><span class="checkbox__text">Пневмоинструмент</span></label>
+											</div>
 										</div>
-										<div class="checkbox">
-											<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="2" name="form[]">
-											<label for="c_2" class="checkbox__label"><span class="checkbox__text">Электрогенераторы</span></label>
-										</div>
-										<div class="checkbox">
-											<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3" name="form[]">
-											<label for="c_3" class="checkbox__label"><span class="checkbox__text">Компрессоры</span></label>
-										</div>
-										<div class="checkbox">
-											<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="4" name="form[]">
-											<label for="c_4" class="checkbox__label"><span class="checkbox__text">Пневмоинструмент</span></label>
-										</div>
-										<div class="checkbox">
-											<input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="5" name="form[]">
-											<label for="c_5" class="checkbox__label"><span class="checkbox__text">Насосное оборудование</span></label>
-										</div>
-										<div class="checkbox">
-											<input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="6" name="form[]">
-											<label for="c_6" class="checkbox__label"><span class="checkbox__text">Тепловое оборудование</span></label>
-										</div>
-										<div class="checkbox">
-											<input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="7" name="form[]">
-											<label for="c_7" class="checkbox__label"><span class="checkbox__text">Зарядные устройства</span></label>
-										</div>
-										<div class="checkbox">
-											<input id="c_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="8" name="form[]">
-											<label for="c_8" class="checkbox__label"><span class="checkbox__text">Садовое оборудование</span></label>
-										</div>
-										<div class="checkbox">
-											<input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="9" name="form[]">
-											<label for="c_9" class="checkbox__label"><span class="checkbox__text">Строительный инструмент</span></label>
-										</div>
-										<div class="checkbox">
-											<input id="c_10" data-error="Ошибка" class="checkbox__input" type="checkbox" value="10" name="form[]">
-											<label for="c_10" class="checkbox__label"><span class="checkbox__text">Электроинструмент</span></label>
+										<div class="form-diller__group">
+											<div class="checkbox">
+												<input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="5" name="form[]">
+												<label for="c_5" class="checkbox__label"><span class="checkbox__text">Насосное<br> оборудование</span></label>
+											</div>
+											<div class="checkbox">
+												<input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="6" name="form[]">
+												<label for="c_6" class="checkbox__label"><span class="checkbox__text">Тепловое<br> оборудование</span></label>
+											</div>
+											<div class="checkbox">
+												<input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="7" name="form[]">
+												<label for="c_7" class="checkbox__label"><span class="checkbox__text">Зарядные<br> устройства</span></label>
+											</div>
+											<div class="checkbox">
+												<input id="c_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="8" name="form[]">
+												<label for="c_8" class="checkbox__label"><span class="checkbox__text">Садовое<br> оборудование</span></label>
+											</div>
+											<div class="checkbox">
+												<input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="9" name="form[]">
+												<label for="c_9" class="checkbox__label"><span class="checkbox__text">Строительный<br> инструмент</span></label>
+											</div>
+											<div class="checkbox">
+												<input checked id="c_10" data-error="Ошибка" class="checkbox__input" type="checkbox" value="10" name="form[]">
+												<label for="c_10" class="checkbox__label"><span class="checkbox__text">Электроинструмент</span></label>
+											</div>
 										</div>
 									</div>
 								</fieldset>

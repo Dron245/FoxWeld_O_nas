@@ -10,10 +10,14 @@ textarea {
 }
 .input {
 	border-radius: 0 !important;
+	background-color: #f8f8f8;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
+	padding: 0px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	//margin-bottom: 10px;
+	border-bottom: 1px solid black;
 	&._form-focus {
 	}
 	&._form-error {
@@ -23,3 +27,8 @@ textarea.input {
 	resize: none;
 	padding: 0px 0px;
 }
+
+::-webkit-input-placeholder {color:#dbdbdb; }
+::-moz-placeholder          {color:#dbdbdb; }/* Firefox 19+ */
+:-moz-placeholder           {color:#dbdbdb; }/* Firefox 18- */
+:-ms-input-placeholder      {color:#dbdbdb; }

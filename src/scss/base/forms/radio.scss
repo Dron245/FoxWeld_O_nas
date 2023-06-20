@@ -1,13 +1,17 @@
 .options {
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	//flex-direction: column;
 	align-items: flex-start;
 	// .options__item
 	&__item {
 		position: relative;
+		display: inline-block;
 		cursor: pointer;
 		&:not(:last-child) {
-			margin-bottom: em(5);
+			//margin-bottom: em(5);
+			//margin-right: 80px;
 		}
 	}
 	// .options__input
@@ -47,7 +51,7 @@
 			width: 10px;
 			height: 10px;
 			border-radius: 50%;
-			background-color: #77243a;
+			background-color: $mainorange;
 			position: absolute;
 			left: 5px;
 			top: 5px;

@@ -1,0 +1,80 @@
+.forms {
+
+	&__container {
+	}
+
+	&__wrapper {
+		margin: 0 auto;
+		width: 60%;
+	}
+
+	&__form {
+		legend {
+			
+		}
+		
+	}
+}
+.form {
+
+	&__legend {
+		font-weight: 600;
+		//font-size: rem(18);
+	}
+
+	&__item {
+		margin-top: 15px;
+	}
+
+	&__label {
+		margin-bottom: 10px;
+		display: block;
+		span {
+			color: red;
+		}
+	}
+
+	&__input {
+		padding: 15px 18px;
+	}
+
+	&__agree {
+		
+	}
+
+	&__checkbox {
+	}
+
+	&__button {
+	}
+}
+
+.input {
+}
+.checkbox {
+
+	&__input {
+	}
+
+	&__label {
+	}
+
+	&__text {
+		a {
+			color: $mainorange;
+			text-decoration: underline;
+		}
+		span {
+			color: red;
+		}
+	}
+}
+.button {
+	margin-top: 40px;
+	background-color: $mainorange;
+	padding: 20px 30px;
+	color: white;
+	font-weight: 600;
+	text-transform: uppercase;
+	//transition: all 0.3s;
+}

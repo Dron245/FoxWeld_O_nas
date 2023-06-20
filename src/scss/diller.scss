@@ -151,27 +151,49 @@ p {
 .page {
 
 	&__diller-form {
+		@include adaptiveValue("margin-top", 40, 30,1280,320,1);
 	}
 }
 .diller-form {
 
 	&__container {
+		p {
+			margin-top: 40px;
+		}
 	}
 
 	&__title {
+		@media (min-width:$mobile){
+			 br {
+				display: none;
+			 }
+		}
+		@media (max-width:$mobile){
+			 display: flex;
+			 justify-content: center;
+			 align-items: center; 
+		}
 	}
 
 	&__form {
+		margin-top: 40px;
 	}
 }
 .title {
 }
 .form-diller {
 
-	&__title {
+	&__firsttitle {
+		display: block;
+		text-align: center;
+		font-weight: 600;
+		font-size: 20px;
 	}
 
 	&__body {
+		@include adaptiveValue("margin-top", 34, 25,1280,320,1);
+		border: 1px solid $mainColor;
+		padding: 30px 35px;
 	}
 
 	&__item {

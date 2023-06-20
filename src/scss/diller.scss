@@ -1,0 +1,229 @@
+p {
+	font-size: rem(14);
+	span {
+		font-weight: 600;
+	}
+}
+/*=====ADVATAGES========*/
+
+.page {
+
+	&__advantages {
+		margin-top: 40px;
+	}
+}
+.advantages {
+
+	&__container {
+	}
+
+	& p {
+		
+		}
+	}
+
+.advanages {
+
+	&__body {
+		margin-top: 35px;
+		margin-bottom: 30px;
+		display: flex;
+		//justify-content: space-between;
+		
+		@media (max-width:$mobile){
+			 margin-top: 20px;
+			 margin-bottom: 20px;
+			 //flex-direction: column;
+			 display: block;
+		}
+	}
+
+	&__item {
+		flex: 0 0 percent(635,1280);
+		&:last-child{
+			padding-left: 100px;
+			& .item-advantages__img {
+				padding-bottom: 63.552%;
+			}
+			@media (max-width:$mobile){
+				 padding-left: 0; 
+			}
+		}
+		@media (max-width:$mobile){
+			 &:not(:first-child) {
+				margin-top: 20px;
+			 } 
+		}
+	}
+
+}
+.item-advantages {
+	position: relative;
+	//z-index: 2;
+	&__img {
+		//padding-bottom: percent(340,1250);
+		&:first-child{
+			padding-bottom: 53.544%;
+			@media (max-width:$mobile){
+				  
+			}
+		}
+		&:last-child{
+			//padding-bottom: 53%;
+		}
+		transition: 0.4s;
+		opacity: 1;
+		@media (min-width:$mobile){
+			&:hover{
+				opacity: 0.1;
+				& ~ .item-advantages__scroll {
+					top: 0%;
+					padding-top: 10px;
+					visibility: visible;
+					opacity: 1;
+					z-index: 2;
+				}
+			} 
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 600;
+		display: block;
+		@media (max-width:$mobile){
+			 font-size: 16px;
+			 margin-top: 25px;
+		}
+	}
+
+	&__scroll {
+		@media (min-width:$mobile){
+			position: absolute;
+			top: 100%;
+			width: 100%;
+			transition: 0.4s;
+			visibility: hidden;
+			opacity: 0;
+			padding-left: 10px;
+		}
+		
+		//z-index: 2;
+		//pointer-events: none;
+	}
+
+	&__subtitle {
+		display: block;
+		margin-top: 45px;
+		margin-bottom: 5px;
+		@media (max-width:$mobile){
+			 margin-top: 25px;
+		}
+		font-weight: 600;
+	}
+
+	&__list {
+	}
+
+	&__punkt {
+		font-size: 14px;
+		display: flex;
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+		&::before{
+			content:'';
+			flex: 0 0 5px;
+			display: block;
+			width: 5px;
+			height: 5px;
+			margin-right: 10px;
+			margin-top: 9px;
+			border-radius: 50%;
+			background-color: $mainColor;
+		}
+	}
+}
+
+/*=======FORM==========*/
+
+.page {
+
+	&__diller-form {
+	}
+}
+.diller-form {
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__form {
+	}
+}
+.title {
+}
+.form-diller {
+
+	&__title {
+	}
+
+	&__body {
+	}
+
+	&__item {
+	}
+
+	&__input {
+	}
+
+	&__options {
+	}
+
+	&__check {
+	}
+
+	&__button {
+	}
+}
+.input {
+}
+.tel {
+}
+.inn {
+}
+.options {
+
+	&__item {
+	}
+
+	&__input {
+	}
+
+	&__label {
+	}
+
+	&__text {
+	}
+}
+.checkbox {
+
+	&__input {
+	}
+
+	&__label {
+	}
+
+	&__text {
+	}
+}
+.contact {
+
+	&__btn {
+	}
+}
+.button {
+}

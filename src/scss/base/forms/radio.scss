@@ -13,6 +13,13 @@
 			//margin-bottom: em(5);
 			//margin-right: 80px;
 		}
+		@media (max-width:$mobile){
+			 display: block;
+			 &:not(:last-child) {
+				margin-bottom: em(15);
+				//margin-right: 80px;
+			}
+		}
 	}
 	// .options__input
 	&__input {

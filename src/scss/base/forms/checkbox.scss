@@ -1,7 +1,8 @@
+/*
 .checkbox {
 	position: relative;
 	&:not(:last-child) {
-		//margin-bottom: em(5);
+		margin-bottom: em(5);
 	}
 	// .checkbox__input
 	&__input {
@@ -9,14 +10,15 @@
 		width: 0;
 		height: 0;
 		opacity: 0;
+		
 		&:focus + .checkbox__label:before {
-			//box-shadow: 0 0 5px #000;
 
+			//opacity: 0;
 		}
-		&:checked + .checkbox__label:before {
-			//background: #000;
+		&:checked + .checkbox__label::after {
 			opacity: 1;
 		}
+
 	}
 	// .checkbox__label
 	&__label {
@@ -24,15 +26,18 @@
 		display: inline-flex;
 		align-items: center;
 		position: relative;
-		gap: 20px;
+		gap: 10px;
 		&:before {
 			content: "";
-			//align-self: flex-start;
+			align-self: flex-start;
 			flex: 0 0 20px;
 			width: 20px;
 			height: 20px;
-			border: 1px solid $mainColor;
-			//box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+			border: 1px solid #a7a9ac;
+			box-shadow: 0 0 5px #7e7878;
+			box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+			//transition: all 0.3s;
+			//transform: scale(0);
 		}
 		&::after{
 			content:'';
@@ -44,8 +49,88 @@
 			transition: opacity 0.4s ease;
 			//transform: scale(0);
 			opacity: 0;
-			background: url('@img/diller/01.png') 0 0 / cover no-repeat;
+			background: url('@img/forms/01.png') 0 0 / cover no-repeat;
 		}
+	}
+	// .checkbox__text
+	&__text {
+		
+	}
+}*/
+
+.checkbox {
+	position: relative;
+	@media (max-width:$mobile){
+		  &:not(:last-child) {
+		margin-bottom: em(15);
+	}
+	}
+	
+	// .checkbox__input
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		&:focus + .checkbox__label:before {
+			//box-shadow: 0 0 5px #000;
+
+		}
+		&:checked + .checkbox__label:after {
+			//background: #000;
+			//opacity: 1;
+		}
+		&:checked + .checkbox__label {
+			& .checkbox__body::after {
+				opacity: 1;
+			}
+		}
+	}
+	// .checkbox__label
+	&__label {
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		gap: 20px;
+		@media (max-width:$mobile){
+			 gap: 15px; 
+		}
+		// &:before {
+		// 	content: "";
+		// 	align-self: center;
+		// 	flex: 0 0 20px;
+		// 	width: 20px;
+		// 	height: 20px;
+		// 	border: 1px solid $mainColor;
+		// 	//box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+		// }
+		
+	}
+
+	&__body {
+		position: relative;
+			align-self: center;
+			flex: 0 0 20px;
+			width: 20px;
+			height: 20px;
+			border: 1px solid $mainColor;
+			&::after{
+				content:'';
+				position: absolute;
+				top: 1px;
+				left: 1px;
+				width: 16px;
+				height: 16px;
+				transition: opacity 0.3s ease;
+				//transform: scale(0);
+				opacity: 0;
+				background: url('@img/diller/01.png') 0 0 / cover no-repeat;
+			}
+			@media (max-width:$mobile){
+				 align-self: flex-start;
+				 transform: translateY(3px);
+			}
 	}
 	// .checkbox__text
 	&__text {

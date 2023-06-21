@@ -53,64 +53,64 @@
 					<h4 class="diller-form__title title"><span>Как стать <br>дилером Foxweld</span></h4>
 					<div class="diller-form__container">
 						<p >Решили стать нашим партнером? Предлагаем вам заполнить анкету дилера. </p>
-						<form action="#" class="diller-form__form form-diller">
+						<form data-dev data-popup-message="#form-message" action="#" class="diller-form__form form-diller">
 							<div class="form-diller__body">
 								<span class="form-diller__firsttitle">АНКЕТА ДИЛЕРА</span>
-								<fieldset >
+								<!-- <fieldset >
 									<div class="form-diller__item">
 										<label class="form-diller__title">Имя <span>*</span></label>
-										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Иван" class="form-diller__input input">
+										<input data-required autocomplete="off" type="text" name="name" data-error="Введите имя" placeholder="Иван" class="form-diller__input input">
 									</div>
 									<div class="form-diller__item">
 										<label class="form-diller__title">Фамилия <span>*</span></label>
-										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Иванов" class="form-diller__input input">
+										<input data-required autocomplete="off" type="text" name="family" data-error="Введите фамилию" placeholder="Иванов" class="form-diller__input input">
 									</div>
 									<div class="form-diller__item">
 										<label class="form-diller__title">Телефон <span>*</span></label>
-										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="+7(900)000-00-00" class="form-diller__input input tel">
+										<input data-required autocomplete="off" type="text" name="phone" data-error="Введите телефон" placeholder="+7(900)000-00-00" class="form-diller__input input tel">
 									</div>
 									<div class="form-diller__item">
 										<label class="form-diller__title">Электронная почта <span>*</span></label>
-										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="ivanov_ivan@yandex.ru" class="form-diller__input input">
+										<input data-required autocomplete="off" type="text" name="email" data-error="Введите электронную почту" placeholder="ivanov_ivan@yandex.ru" class="form-diller__input input">
 									</div>
 									<div class="form-diller__item">
 										<label class="form-diller__title">Название предприятия <span>*</span></label>
-										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="ИП 'Иванов'" class="form-diller__input input">
+										<input data-required autocomplete="off" type="text" name="companyname" data-error="Введите название предприятия" placeholder="ИП 'Иванов'" class="form-diller__input input">
 									</div>
 									<div class="form-diller__item">
 										<label class="form-diller__title">ИНН <span>*</span></label>
-										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="000000000000000" class="form-diller__input input inn">
+										<input data-required autocomplete="off" type="text" name="inn" data-error="Введите ИНН" placeholder="000000000000000" class="form-diller__input input inn">
 									</div>
 									<div class="form-diller__item">
 										<label class="form-diller__title">Город <span>*</span></label>
-										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Москва" class="form-diller__input input">
+										<input data-required autocomplete="off" type="text" name="city" data-error="Введите город" placeholder="Москва" class="form-diller__input input">
 									</div>
 									<div class="form-diller__item">
 										<label class="form-diller__title">Сайт предприятия <span>*</span></label>
-										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="ivanov.ru" class="form-diller__input input">
+										<input data-required autocomplete="off" type="text" name="website" data-error="Введите сайт предприятия" placeholder="ivanov.ru" class="form-diller__input input">
 									</div>
-								</fieldset>
+								</fieldset> -->
 								<fieldset >
 									<legend class="form-diller__title">Вид деятельности предприятия <span class="otvet">(выберите один ответ)</span></legend>
 									<div class="form-diller__options options">
 										<div class="options__item">
-											<input hidden id="o_1" class="options__input" checked type="radio" value="1" name="option">
+											<input hidden id="o_1" class="options__input"  type="radio" value="0" name="option" checked required>
 											<label for="o_1" class="options__label"><span class="options__text">Торговая сеть</span></label>
 										</div>
 										<div class="options__item">
-											<input hidden id="o_2" class="options__input" type="radio" value="2" name="option">
+											<input hidden id="o_2" class="options__input" type="radio" value="1" name="option">
 											<label for="o_2" class="options__label"><span class="options__text">Частник</span></label>
 										</div>
 										<div class="options__item">
-											<input hidden id="o_3" class="options__input" checked type="radio" value="3" name="option">
+											<input hidden id="o_3" class="options__input"  type="radio" value="2" name="option">
 											<label for="o_3" class="options__label"><span class="options__text">Производство</span></label>
 										</div>
 										<div class="options__item">
-											<input hidden id="o_4" class="options__input" type="radio" value="4" name="option">
+											<input hidden id="o_4" class="options__input" type="radio" value="3" name="option">
 											<label for="o_4" class="options__label"><span class="options__text">Сервис</span></label>
 										</div>
 										<div class="options__item">
-											<input hidden id="o_5" class="options__input" type="radio" value="5" name="option">
+											<input hidden id="o_5" class="options__input" type="radio" value="4" name="option">
 											<label for="o_5" class="options__label"><span class="options__text">Интернет магазин</span></label>
 										</div>
 									</div>
@@ -120,54 +120,54 @@
 									<div class="form-diller__check">
 										<div class="form-diller__group">
 											<div class="checkbox">
-												<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-												<label for="c_1" class="checkbox__label"><span class="checkbox__text">Сварочное оборудование,<br> аксессуары, расходные материалы</span></label>
+												<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="interest[]" checked required>
+												<label for="c_1" class="checkbox__label"><div class="checkbox__body"></div><span class="checkbox__text">Сварочное оборудование,<br> аксессуары, расходные материалы</span></label>
 											</div>
 											<div class="checkbox">
-												<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="2" name="form[]">
-												<label for="c_2" class="checkbox__label"><span class="checkbox__text">Электрогенераторы</span></label>
+												<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="2" name="interest[]">
+												<label for="c_2" class="checkbox__label"><div class="checkbox__body"></div><span class="checkbox__text">Электрогенераторы</span></label>
 											</div>
 											<div class="checkbox">
-												<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3" name="form[]">
-												<label for="c_3" class="checkbox__label"><span class="checkbox__text">Компрессоры</span></label>
+												<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3" name="interest[]">
+												<label for="c_3" class="checkbox__label"><div class="checkbox__body"></div><span class="checkbox__text">Компрессоры</span></label>
 											</div>
 											<div class="checkbox">
-												<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="4" name="form[]">
-												<label for="c_4" class="checkbox__label"><span class="checkbox__text">Пневмоинструмент</span></label>
+												<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="4" name="interest[]">
+												<label for="c_4" class="checkbox__label"><div class="checkbox__body"></div><span class="checkbox__text">Пневмоинструмент</span></label>
 											</div>
 										</div>
 										<div class="form-diller__group">
 											<div class="checkbox">
-												<input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="5" name="form[]">
-												<label for="c_5" class="checkbox__label"><span class="checkbox__text">Насосное<br> оборудование</span></label>
+												<input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="5" name="interest[]">
+												<label for="c_5" class="checkbox__label"><div class="checkbox__body"></div><span class="checkbox__text">Насосное<br> оборудование</span></label>
 											</div>
 											<div class="checkbox">
-												<input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="6" name="form[]">
-												<label for="c_6" class="checkbox__label"><span class="checkbox__text">Тепловое<br> оборудование</span></label>
+												<input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="6" name="interest[]">
+												<label for="c_6" class="checkbox__label"><div class="checkbox__body"></div><span class="checkbox__text">Тепловое<br> оборудование</span></label>
 											</div>
 											<div class="checkbox">
-												<input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="7" name="form[]">
-												<label for="c_7" class="checkbox__label"><span class="checkbox__text">Зарядные<br> устройства</span></label>
+												<input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="7" name="interest[]">
+												<label for="c_7" class="checkbox__label"><div class="checkbox__body"></div><span class="checkbox__text">Зарядные<br> устройства</span></label>
 											</div>
 											<div class="checkbox">
-												<input id="c_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="8" name="form[]">
-												<label for="c_8" class="checkbox__label"><span class="checkbox__text">Садовое<br> оборудование</span></label>
+												<input id="c_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="8" name="interest[]">
+												<label for="c_8" class="checkbox__label"><div class="checkbox__body"></div><span class="checkbox__text">Садовое<br> оборудование</span></label>
 											</div>
 											<div class="checkbox">
-												<input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="9" name="form[]">
-												<label for="c_9" class="checkbox__label"><span class="checkbox__text">Строительный<br> инструмент</span></label>
+												<input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="9" name="interest[]">
+												<label for="c_9" class="checkbox__label"><div class="checkbox__body"></div><span class="checkbox__text">Строительный<br> инструмент</span></label>
 											</div>
 											<div class="checkbox">
-												<input checked id="c_10" data-error="Ошибка" class="checkbox__input" type="checkbox" value="10" name="form[]">
-												<label for="c_10" class="checkbox__label"><span class="checkbox__text">Электроинструмент</span></label>
+												<input id="c_10" data-error="Ошибка" class="checkbox__input" type="checkbox" value="10" name="interest[]">
+												<label for="c_10" class="checkbox__label"><div class="checkbox__body"></div><span class="checkbox__text">Электроинструмент</span></label>
 											</div>
 										</div>
 									</div>
 								</fieldset>
-								<button type="submit" class="form-diller__button contact__btn button">Отправить запрос</button>
+								<button type="submit" class="form-diller__button button">Отправить запрос</button>
 								<div class="checkbox">
-									<input id="c_11" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-									<label for="c_11" class="checkbox__label"><span class="checkbox__text">Нажимая кнопку «Отправить запрос», я даю согласие на обработку моих персональных данных в соответствии с <a href="#">«Политикой конфиденциальности компании Foxweld»</a>. </span></label>
+									<input data-required checked id="c_11" data-error="прочтите и согласитесь с обработкой персональных данных" class="checkbox__input" type="checkbox" value="11" name="agreement">
+									<label for="c_11" class="checkbox__label"><div class="checkbox__body"></div><span class="checkbox__text">Нажимая кнопку «Отправить запрос», я даю согласие на обработку моих персональных данных в соответствии с <a href="https://foxweld.ru/company/policy/">«Политикой конфиденциальности компании Foxweld»</a>. </span></label>
 								</div>
 							</div>
 						</form>

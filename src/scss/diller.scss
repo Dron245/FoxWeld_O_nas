@@ -152,7 +152,7 @@ p {
 
 	&__diller-form {
 		@include adaptiveValue("margin-top", 40, 30,1280,320,1);
-		background-color: #f8f8f8;
+		//background-color: #f8f8f8;
 	}
 }
 .diller-form {
@@ -164,6 +164,10 @@ p {
 	}
 
 	&__title {
+		
+		span {
+			//background-color: #f8f8f8;
+		}
 		@media (min-width:$mobile){
 			 br {
 				display: none;
@@ -192,12 +196,19 @@ p {
 	}
 
 	&__body {
+		background-color: #f8f8f8;
 		@include adaptiveValue("margin-top", 34, 25,1280,320,1);
 		border: 1px solid $mainColor;
 		padding: 30px 35px;
 		fieldset {
 			margin-top: 40px;
 			
+		}
+		@media (max-width:$mobile){
+			 padding: 30px 30px; 
+			 border: initial;
+			 margin-left: -15px;
+   		 margin-right: -15px;
 		}
 	}
 
@@ -211,8 +222,21 @@ p {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-wrap: wrap;
+   	 row-gap: 25px;
 		&:not(:last-child) {
 			margin-bottom: 25px;
+		}
+		@media (max-width: em(900)){
+			justify-content: flex-start;
+			column-gap: 20px;
+		}
+		@media (max-width:$mobile){
+			 display: block;
+			 margin-bottom: 0;
+			 &:not(:last-child) {
+				margin-bottom: 15px;
+			}
 		}
 	}
 
@@ -222,7 +246,7 @@ p {
 	&__title {
 		display: inline-block;
 		font-weight: 600;
-		margin-bottom: 15px;
+		//margin-bottom: 15px;
 		span {
 			color: red;
 			&.otvet {
@@ -234,6 +258,10 @@ p {
 
 	&__options {
 		display: flex;
+		margin-top: 10px;
+		@media (max-width:$mobile){
+			display: block; 
+	  }
 	}
 
 	&__check {
@@ -242,10 +270,31 @@ p {
 		//justify-content: space-between;
 		//flex-wrap: wrap;
 		//row-gap: 30px;
-		
+		margin-top: 10px;
 	}
 
 	&__button {
+		@include adaptiveValue("margin-top", 50, 25,1280,320,1);
+		@include adaptiveValue("margin-bottom", 60, 25,1280,320,1);
+		display: block;
+			padding: 25px 40px;
+			width: 100%;
+			//font-weight: 600;
+			color: white;
+			text-align: center;
+		
+			background-color: $mainorange;
+			text-transform: uppercase;
+			// &:hover{
+			// 	background-size: 100% 100%;
+			// 	color: white;
+			// 	border: 2px solid red
+			// };
+			@media (max-width:$mobile){
+				padding: 25px 10px; 
+		  }
+			font-size: 16px;;
+		
 	}
 }
 .input {
@@ -280,6 +329,16 @@ p {
 	}
 
 	&__text {
+		line-height: 1.2;
+		a {
+			text-decoration: underline;
+		}
+		@media (max-width:$mobile){
+			line-height: 1.5;
+			 br {
+				display: none;
+			 } 
+		}
 	}
 }
 .contact {

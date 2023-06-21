@@ -54,3 +54,12 @@ window.addEventListener("load", windowLoad);
 			});
 		}
 	}
+	// document.querySelector('.form-diller__button').addEventListener('click', check)
+	// function check() {
+	// 	const chk =document.querySelectorAll('.form-diller__group > .checkbox > input[type="checkbox"]').checked;
+	// console.log(chk);
+	// if(chk.length < 1) {
+	// 	document.querySelector('.form-diller__check').insertAdjacentHTML('beforeend', `<div class="form__error">Выберите</div>`)
+	// }
+	// }
+	

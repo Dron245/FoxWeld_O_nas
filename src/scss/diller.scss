@@ -29,12 +29,14 @@ p {
 		margin-bottom: 30px;
 		display: flex;
 		//justify-content: space-between;
-		
-		@media (max-width:$mobile){
-			 margin-top: 20px;
+		@media (max-width: em(1190)){
+			  margin-top: 20px;
 			 margin-bottom: 20px;
 			 //flex-direction: column;
 			 display: block;
+		}
+		@media (max-width:$mobile){
+			 
 		}
 	}
 
@@ -45,11 +47,11 @@ p {
 			& .item-advantages__img {
 				padding-bottom: 63.552%;
 			}
-			@media (max-width:$mobile){
+			@media (max-width:em(1190)){
 				 padding-left: 0; 
 			}
 		}
-		@media (max-width:$mobile){
+		@media (max-width:em(1190)){
 			 &:not(:first-child) {
 				margin-top: 20px;
 			 } 
@@ -73,15 +75,17 @@ p {
 		}
 		transition: 0.4s;
 		opacity: 1;
-		@media (min-width:$mobile){
+		@media (min-width:em(1190)){
 			&:hover{
 				opacity: 0.1;
+				z-index: 2;
 				& ~ .item-advantages__scroll {
-					top: 0%;
+					//top: 0%;
+					transform: translateY(0%);
 					padding-top: 10px;
 					visibility: visible;
 					opacity: 1;
-					z-index: 2;
+					//z-index: 2;
 				}
 			} 
 		}
@@ -92,16 +96,17 @@ p {
 		font-size: 18px;
 		font-weight: 600;
 		display: block;
-		@media (max-width:$mobile){
+		@media (max-width:em(1190)){
 			 font-size: 16px;
 			 margin-top: 25px;
 		}
 	}
 
 	&__scroll {
-		@media (min-width:$mobile){
+		@media (min-width:em(1190)){
 			position: absolute;
-			top: 100%;
+			top: 0%;
+			transform: translateY(100%);
 			width: 100%;
 			transition: 0.4s;
 			visibility: hidden;
@@ -252,6 +257,11 @@ p {
 			&.otvet {
 				color: #b1b1b1;
 				font-weight: normal;
+			}
+		}
+		br {
+			@media (min-width:$mobile){
+				 display: none; 
 			}
 		}
 	}

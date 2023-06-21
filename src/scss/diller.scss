@@ -29,7 +29,7 @@ p {
 		margin-bottom: 30px;
 		display: flex;
 		//justify-content: space-between;
-		@media (max-width: em(1190)){
+		@media (max-width: em(1023)){
 			  margin-top: 20px;
 			 margin-bottom: 20px;
 			 //flex-direction: column;
@@ -47,11 +47,11 @@ p {
 			& .item-advantages__img {
 				padding-bottom: 63.552%;
 			}
-			@media (max-width:em(1190)){
+			@media (max-width:em(1023)){
 				 padding-left: 0; 
 			}
 		}
-		@media (max-width:em(1190)){
+		@media (max-width:em(1023)){
 			 &:not(:first-child) {
 				margin-top: 20px;
 			 } 
@@ -75,7 +75,7 @@ p {
 		}
 		transition: 0.4s;
 		opacity: 1;
-		@media (min-width:em(1190)){
+		@media (min-width:em(1023)){
 			&:hover{
 				opacity: 0.1;
 				z-index: 2;
@@ -94,16 +94,17 @@ p {
 	&__title {
 		text-transform: uppercase;
 		font-size: 18px;
+		@include adaptiveValue("font-size", 18, 14,1280,1024,1);
 		font-weight: 600;
 		display: block;
-		@media (max-width:em(1190)){
+		@media (max-width:em(1023)){
 			 font-size: 16px;
 			 margin-top: 25px;
 		}
 	}
 
 	&__scroll {
-		@media (min-width:em(1190)){
+		@media (min-width:em(1023)){
 			position: absolute;
 			top: 0%;
 			transform: translateY(100%);
@@ -121,6 +122,10 @@ p {
 	&__subtitle {
 		display: block;
 		margin-top: 45px;
+		@include adaptiveValue("margin-top", 45, 15,1280,1024,1);
+		@media (max-width: em(1023)){
+			 margin-top: 45px; 
+		}
 		margin-bottom: 5px;
 		@media (max-width:$mobile){
 			 margin-top: 25px;
@@ -136,6 +141,10 @@ p {
 		display: flex;
 		&:not(:last-child) {
 			margin-bottom: 5px;
+			@include adaptiveValue("margin-bottom", 5, 1,1280,1024,1);
+			@media (max-width: em(1023)){
+				 margin-bottom: 5px; 
+			}
 		}
 		&::before{
 			content:'';

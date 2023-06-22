@@ -1,7 +1,10 @@
 p {
-	font-size: rem(14);
+	font-size: 16px;
 	span {
 		font-weight: 600;
+	}
+	@media (max-width:$mobile){
+		 font-size: 14px; 
 	}
 }
 /*=====ADVATAGES========*/
@@ -15,6 +18,10 @@ p {
 .advantages {
 
 	&__container {
+		@media (max-width:$mobile){
+			 padding-left: 27.5px;
+			 padding-right: 27.5px;
+		}
 	}
 
 	& p {
@@ -29,7 +36,7 @@ p {
 		margin-bottom: 30px;
 		display: flex;
 		//justify-content: space-between;
-		@media (max-width: em(1023)){
+		@media (max-width: $tablet){
 			  margin-top: 20px;
 			 margin-bottom: 20px;
 			 //flex-direction: column;
@@ -47,11 +54,11 @@ p {
 			& .item-advantages__img {
 				padding-bottom: 63.552%;
 			}
-			@media (max-width:em(1023)){
+			@media (max-width:$tablet){
 				 padding-left: 0; 
 			}
 		}
-		@media (max-width:em(1023)){
+		@media (max-width:$tablet){
 			 &:not(:first-child) {
 				margin-top: 20px;
 			 } 
@@ -75,7 +82,7 @@ p {
 		}
 		transition: 0.4s;
 		opacity: 1;
-		@media (min-width:em(1023)){
+		@media (min-width:$tablet){
 			&:hover{
 				opacity: 0.1;
 				z-index: 2;
@@ -97,18 +104,21 @@ p {
 		@include adaptiveValue("font-size", 18, 14,1280,1024,1);
 		font-weight: 600;
 		display: block;
-		@media (max-width:em(1023)){
+		@media (max-width:$tablet){
 			 font-size: 16px;
 			 margin-top: 25px;
+		}
+		@media (max-width:$mobile){
+			 font-size: 14px; 
 		}
 	}
 
 	&__scroll {
-		@media (min-width:em(1023)){
+		@media (min-width:$tablet){
 			position: absolute;
 			top: 0%;
 			transform: translateY(100%);
-			width: 100%;
+			//width: 100%;
 			transition: 0.4s;
 			visibility: hidden;
 			opacity: 0;
@@ -123,39 +133,49 @@ p {
 		display: block;
 		margin-top: 45px;
 		@include adaptiveValue("margin-top", 45, 15,1280,1024,1);
-		@media (max-width: em(1023)){
+		@media (max-width: $tablet){
 			 margin-top: 45px; 
 		}
 		margin-bottom: 5px;
 		@media (max-width:$mobile){
 			 margin-top: 25px;
+			 font-size: 14px;
 		}
 		font-weight: 600;
 	}
 
 	&__list {
+		list-style: initial;
 	}
 
 	&__punkt {
-		font-size: 14px;
-		display: flex;
+		//font-size: 14px;
+		//display: flex;
+		@media (max-width:em(1100)){
+			 font-size: 14px; 
+		}
 		&:not(:last-child) {
 			margin-bottom: 5px;
 			@include adaptiveValue("margin-bottom", 5, 1,1280,1024,1);
-			@media (max-width: em(1023)){
+			@media (max-width: $tablet){
 				 margin-bottom: 5px; 
 			}
 		}
 		&::before{
-			content:'';
-			flex: 0 0 5px;
-			display: block;
-			width: 5px;
-			height: 5px;
-			margin-right: 10px;
-			margin-top: 9px;
-			border-radius: 50%;
-			background-color: $mainColor;
+			// content:'';
+			// flex: 0 0 5px;
+			// display: block;
+			// width: 5px;
+			// height: 5px;
+			// margin-right: 10px;
+			// margin-top: 9px;
+			// border-radius: 50%;
+			// background-color: $mainColor;
+			content: "\2022"; /* юникод точки */
+			//color: orange; /* Менять цвет */
+			//font-weight: bold; /* Менять жирность */
+			display: inline-block; /* Расстояние между точкой и текстом */
+			width: 1em; /* Задать значение расстояния */
 		}
 	}
 }
@@ -175,6 +195,10 @@ p {
 		p {
 			margin-top: 40px;
 		}
+		@media (max-width:$mobile){
+			padding-left: 27.5px;
+			padding-right: 27.5px;
+	  }
 	}
 
 	&__title {
@@ -188,6 +212,11 @@ p {
 			 }
 		}
 		@media (max-width:$mobile){
+			&::before, &::after{
+				content:'';
+				transform: translateY(-14px);
+			}
+
 			 display: flex;
 			 justify-content: center;
 			 align-items: center; 
@@ -213,16 +242,16 @@ p {
 		background-color: #f8f8f8;
 		@include adaptiveValue("margin-top", 34, 25,1280,320,1);
 		border: 1px solid $mainColor;
-		padding: 30px 35px;
+		padding: 30px 27.5px;
 		fieldset {
 			margin-top: 40px;
 			
 		}
 		@media (max-width:$mobile){
-			 padding: 30px 30px; 
+			 //padding: 30px 30px; 
 			 border: initial;
-			 margin-left: -15px;
-   		 margin-right: -15px;
+			 margin-left: -27.5px;
+   		 margin-right: -27.5px;
 		}
 	}
 
@@ -260,6 +289,9 @@ p {
 	&__title {
 		display: inline-block;
 		font-weight: 600;
+		@media (max-width:$mobile){
+			 font-size: 14px; 
+		}
 		//margin-bottom: 15px;
 		span {
 			color: red;
@@ -310,7 +342,8 @@ p {
 			// 	border: 2px solid red
 			// };
 			@media (max-width:$mobile){
-				padding: 25px 10px; 
+				padding: 25px 10px;
+				font-size: 14px;
 		  }
 			font-size: 16px;;
 		
@@ -354,6 +387,7 @@ p {
 		}
 		@media (max-width:$mobile){
 			line-height: 1.5;
+			font-size: 14px;
 			 br {
 				display: none;
 			 } 
